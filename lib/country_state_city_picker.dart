@@ -130,6 +130,30 @@ class _SelectStateState extends State<SelectState> {
       });
     });
 
+     _states.sort((a, b) =>  a.toLowerCase().compareTo(b.toLowerCase()),); 
+    _states.remove("Select State");
+    _states.insert(0, "Select State"); 
+
+    if(widget.defaultCountry == 'United States'){
+      _states.remove('American Samoa');
+      _states.remove('Baker Island');
+      _states.remove('District of Columbia');
+      _states.remove('Guam');
+      _states.remove('Jarvis Island');
+      _states.remove('Howland Island');
+      _states.remove('Johnston Atoll');
+      _states.remove('Kingman Reef');
+      _states.remove('Midway Atoll');
+      _states.remove('Navassa Island');
+      _states.remove('Palmyra Atoll');
+      _states.remove('Wake Island');
+      _states.remove('Northern Mariana Islands');
+      _states.remove('United States Minor Outlying Islands');
+      _states.remove('Puerto Rico');
+      _states.remove('United States Virgin Islands'); 
+    
+    }
+
     return _states;
   }
 
